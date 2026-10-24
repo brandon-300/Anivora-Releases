@@ -1,16 +1,16 @@
 {
   "minSdkVersion": 24,
-  "versionCode": 26,
-  "versionName": "0.1.24",
+  "versionCode": 27,
+  "versionName": "0.1.25",
   "packageName": "com.brandon300.anivora",
   "certificateSha256": "fac61745dc0903786fb9ede62a962b399f7348f0bb6f899b8332667591033b9c",
-  "sha256": "406d324f5226192692052b222d386e1c7da9f79a40d7c3bb946a30fdbbe91c82",
-  "bytes": 53076190,
+  "sha256": "cbc29597bf3b2082fe268d19a7a7830c0d066ecda73b8667981a1212fdccfbf3",
+  "bytes": 53080074,
   "architectures": [
     "arm64-v8a"
   ],
-  "releaseUrl": "https://github.com/brandon-300/Anivora-Releases/releases/tag/v0.1.24-preview-20261023",
-  "assetName": "anivora-0.1.24-arm64.apk",
-  "notes": "# Updates hosted on public GitHub Releases\n\nAnivora now checks the public `brandon-300/Anivora-Releases` feed and downloads signed APKs directly from GitHub's CDN. APK transfers no longer consume Render bandwidth. The application source remains private.\n\nIf your existing updater cannot connect to Render, [download the latest APK manually](https://github.com/brandon-300/Anivora-Releases/releases/latest) and install it over Anivora. Do not uninstall. This one-time manual installation moves you to the public updater; later updates can run without Render. Users several Android version codes behind can install the latest directly.\n\nThe package ID, signing certificate and downloaded APK checksum/size checks are preserved. Downloads resume using HTTP Range when available; a host that ignores Range causes a safe full re-download followed by the same verification. GitHub feed failures show a retry message and are not reported as “up to date.”\n\nThis changes only app update distribution. Backend-dependent account, library and comment features still need Render to be available.\n",
-  "downloadUrl": "https://github.com/brandon-300/Anivora-Releases/releases/download/v0.1.24-preview-20261023/anivora-0.1.24-arm64.apk"
+  "releaseUrl": "https://github.com/brandon-300/Anivora-Releases/releases/tag/v0.1.25-preview-20261024",
+  "assetName": "anivora-0.1.25-arm64.apk",
+  "notes": "# Anivora 0.1.25 — Download reliability and offline manga\n\n- Manga chapters remain saved page images for offline reading, not MP4 files. Page counts refresh when retry skips already downloaded pages, and notifications show pages saved out of the chapter total.\n- Existing download status fields distinguish recognized network, provider, decode, merge and storage failures. Waiting queue positions exclude active and paused jobs. Chapter progress counts saved pages rather than the next unfinished page.\n- Saved chapters opened from Downloads or manga details use local file/SAF images and saved chapter navigation. Missing or invalid local records never silently request provider images. Reader settings finish loading before restoring the saved page; reloading images retains the current page.\n- Local reader page lookup avoids repeated scans, and Android page clipping is disabled to reduce blank stalls within the existing virtualized window.\n- Profile support labels now say **Support Anivora**. Existing layouts, styling, filters and controls are preserved.\n\nThe package remains `com.brandon300.anivora`, using the existing signing certificate and ARM64 architecture. Install over the existing app without uninstalling to retain data. Public GitHub APK distribution, validation and the update-feed contract are unchanged; APK bytes do not pass through Render. Older Render-only updater builds still need one manual installation from the public release page.\n\nIn-App anime downloads still require finite, supported HLS. Early progressive playback still requires validated ranges and leading metadata. Source refresh must retain episode/rendition identity. Manga stays chapter/page based. Physical Infinix Hot 50i behavior has not been certified by these changes.\n",
+  "downloadUrl": "https://github.com/brandon-300/Anivora-Releases/releases/download/v0.1.25-preview-20261024/anivora-0.1.25-arm64.apk"
 }
