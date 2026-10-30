@@ -1,16 +1,16 @@
 {
   "minSdkVersion": 24,
-  "versionCode": 43,
-  "versionName": "0.1.41",
+  "versionCode": 44,
+  "versionName": "0.1.42",
   "packageName": "com.brandon300.anivora",
   "certificateSha256": "fac61745dc0903786fb9ede62a962b399f7348f0bb6f899b8332667591033b9c",
-  "sha256": "ffb422bb05526724b9eaa0dfde84225de9a9cc165dce9ef49bef89f6ebc56e73",
-  "bytes": 55280410,
+  "sha256": "44781a68960c6b4533343444fac41f08805a02a3922dce9e5b310abfadf25488",
+  "bytes": 55280930,
   "architectures": [
     "arm64-v8a"
   ],
-  "releaseUrl": "https://github.com/brandon-300/Anivora-Releases/releases/tag/v0.1.41-preview-20261030",
-  "assetName": "anivora-0.1.41-arm64.apk",
-  "notes": "# Anivora 0.1.41 — Native bug reports and Discord community integration\n\n- Add **Report Bug** directly below **Support Anivora** in Profile. Guests can submit a native form without signing in; all existing controls and app features retain their behavior.\n- Keep entered text on failures, prevent repeated submissions and show a report reference. Optional device diagnostics require consent. Reports may be public in the Discord bug forum; never include credentials.\n- Verify submissions using a restricted Turnstile challenge and short-lived, payload-bound receipts. Cloudflare stores reports durably and delivers them to Discord independently of Render.\n- Preserve historical channels while adding tracked bug/feature forums, moderated status tags, private support tickets, Community Onboarding and verified release announcements.\n- Synchronize staff-approved reports with private GitHub Issues. A source fix becomes released only after explicit staff association with a verified official APK.\n- Extend the owner dashboard with queue, synchronization and automation health while retaining existing analytics and authentication.\n\nAndroid version code **43**, newer than 0.1.40/code 42. Package\n`com.brandon300.anivora`; ARM64; Android 7.0/API 24 or newer. The established signing\ncertificate must pass verification before publication so this updates existing installations.\n\nDiscord remains optional. No Discord login, OAuth, account linking or identity sync\nis added. Anivora Bot's existing name, avatar and managed Administrator role remain\nunchanged. Native screenshot upload is not offered; screenshots can be attached in\nDiscord. Render's existing bandwidth suspension and billing configuration are unchanged.\n\nPublication requires the established TypeScript, lint, app/backend/bridge tests,\nExpo compatibility, Android integration/native tests, compiled-source and package/\nsigner/integrity checks. Physical Hot 50i/Chromecast QA remains pending.\n\nSource commit: https://github.com/brandon-300/Anivora/commit/2a09e463fa5b2999c488e5efc1f6378849fca58d\n",
-  "downloadUrl": "https://github.com/brandon-300/Anivora-Releases/releases/download/v0.1.41-preview-20261030/anivora-0.1.41-arm64.apk"
+  "releaseUrl": "https://github.com/brandon-300/Anivora-Releases/releases/tag/v0.1.42-preview-20261030",
+  "assetName": "anivora-0.1.42-arm64.apk",
+  "notes": "# Anivora 0.1.42 — Fix native report verification on Android\n\n- Correct the new Report Bug verification handoff on modern Android WebView. Android supplies a trusted source origin rather than a complete page URL; successful verification can now return to the native form and submit the report.\n- Preserve strict challenge navigation, the fixed Cloudflare origin, matching request references, payload-bound receipts and server-side validation. Foreign origins, unrelated Worker paths, invalid receipts and mismatched references remain rejected.\n- Add a real Android WebView regression test that executes the production receipt parser against WebMessageListener callbacks. Keep all existing download/playback/storage integration gates and add this tenth Android test.\n- Preserve Report Bug's position below Support Anivora and above conditional Log out. Guests and signed-in users use the same flow; optional diagnostics remain off by default. No unrelated app features or controls change.\n\nThis corrects 0.1.41's “Verified. Returning to Anivora” stall. Android version code\n**44**, newer than 0.1.41/code 43. Package `com.brandon300.anivora`; ARM64;\nAndroid 7.0/API 24 or newer. Publication requires the established package, signer,\nsource, native-unit and Android integration verification gates.\n\nInstall over the existing app without uninstalling. Discord remains optional;\nthere is no Discord login, OAuth or account linking. The bot's name, app-icon\navatar and Administrator role remain unchanged. Cloudflare reporting is independent\nof the suspended Render account backend. Native attachment upload is not offered.\n\nSource commit: https://github.com/brandon-300/Anivora/commit/19f9243b52034e084163e255eebeb3ebf863de11\n",
+  "downloadUrl": "https://github.com/brandon-300/Anivora-Releases/releases/download/v0.1.42-preview-20261030/anivora-0.1.42-arm64.apk"
 }
